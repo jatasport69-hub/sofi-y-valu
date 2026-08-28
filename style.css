@@ -1,0 +1,1009 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Desplazamiento suave al hacer clic en los enlaces del menú */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* Quitamos el subrayado de los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   2. HEADER / MENÚ
+   ========================================================= */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+
+    padding: 15px 7%;
+
+    background: white;
+
+    /* Coloca logo y menú en una misma fila */
+    display: flex;
+
+    /* Centra verticalmente */
+    align-items: center;
+
+    /* Logo a la izquierda y menú a la derecha */
+    justify-content: space-between;
+
+    /* Mantiene el menú arriba cuando hacemos scroll */
+    position: sticky;
+    top: 0;
+
+    /* Hace que aparezca encima del resto */
+    z-index: 1000;
+
+    /* Sombra debajo del menú */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Emoji del logo */
+.logo span {
+    font-size: 32px;
+}
+
+
+/* Nombre del colegio */
+.logo h1 {
+    font-size: 21px;
+    color: #172554;
+}
+
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* Enlaces del menú */
+.navbar a {
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* Cuando pasamos el mouse por encima */
+.navbar a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   3. SECCIONES GENERALES
+   ========================================================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+
+/* Títulos de las secciones */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* Texto pequeño encima del título */
+.section-title p {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+
+/* Título principal de cada sección */
+.section-title h2 {
+    font-size: 38px;
+    color: #172554;
+}
+
+
+/* =========================================================
+   4. PORTADA / HERO
+   ========================================================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 100px 8%;
+
+    /* Centra el contenido verticalmente */
+    display: flex;
+    align-items: center;
+
+    /* Fondo con degradado */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.92),
+            rgba(30, 64, 175, 0.70)
+        ),
+        linear-gradient(135deg, #1e3a8a, #60a5fa);
+
+    color: white;
+}
+
+
+/* Contenido de la portada */
+.hero-content {
+    max-width: 700px;
+}
+
+
+/* Texto pequeño de la portada */
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+
+/* Título principal */
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+
+/* Párrafo de la portada */
+.hero p:not(.subtitle) {
+    font-size: 18px;
+    max-width: 620px;
+    color: #e5e7eb;
+}
+
+
+/* Contenedor de los botones */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   5. BOTONES GENERALES
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    border: 2px solid transparent;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Botón azul */
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* Efecto del botón azul */
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* Botón transparente */
+.btn-secondary {
+    background: transparent;
+    border-color: white;
+    color: white;
+}
+
+
+/* Efecto del botón transparente */
+.btn-secondary:hover {
+    background: white;
+    color: #1e3a8a;
+}
+
+
+/* =========================================================
+   6. SOBRE NOSOTROS
+   ========================================================= */
+
+.about {
+    background: #f8fafc;
+}
+
+
+/* Dos columnas */
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* Título */
+.about-text h3 {
+    font-size: 30px;
+    color: #172554;
+    margin-bottom: 20px;
+}
+
+
+/* Párrafos */
+.about-text p {
+    margin-bottom: 18px;
+    color: #64748b;
+}
+
+
+/* Tarjetas de información */
+.about-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Tarjeta individual */
+.info-card {
+    background: white;
+
+    padding: 25px 18px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+
+/* Efecto de tarjeta */
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* Emoji */
+.info-card span {
+    font-size: 35px;
+}
+
+
+/* Título */
+.info-card h3 {
+    margin: 10px 0;
+    color: #172554;
+}
+
+
+/* Texto */
+.info-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   7. NIVELES EDUCATIVOS
+   ========================================================= */
+
+.levels {
+    background: white;
+}
+
+
+/* Contenedor de las tarjetas */
+.level-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Tarjeta */
+.level-card {
+    padding: 35px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+/* Efecto al pasar el mouse */
+.level-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Círculo del icono */
+.level-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Título del nivel */
+.level-card h3 {
+    font-size: 24px;
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+
+/* Descripción */
+.level-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+
+/* Enlace */
+.level-card a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   8. RECURSOS EDUCATIVOS
+   ========================================================= */
+
+.resources {
+    background: #f8fafc;
+}
+
+
+/*
+   Grid de recursos.
+
+   En una computadora tendremos 3 columnas.
+*/
+.resources-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Tarjeta educativa */
+.resource-card {
+    background: white;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+
+/* Movimiento de la tarjeta */
+.resource-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Emoji de cada recurso */
+.resource-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Nombre del recurso */
+.resource-card h3 {
+    color: #172554;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Descripción */
+.resource-card p {
+    color: #64748b;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Botón de recurso */
+.resource-btn {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* Efecto del botón */
+.resource-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   9. ACTIVIDADES
+   ========================================================= */
+
+.activities {
+    background: white;
+}
+
+
+/* Tres columnas */
+.activity-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Tarjeta */
+.activity {
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Parte superior */
+.activity-image {
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+
+/* Colores de cada actividad */
+.sports {
+    background: #dbeafe;
+}
+
+.art {
+    background: #fce7f3;
+}
+
+.science {
+    background: #dcfce7;
+}
+
+
+/* Contenido */
+.activity-content {
+    padding: 25px;
+}
+
+
+/* Título */
+.activity-content h3 {
+    color: #172554;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Texto */
+.activity-content p {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   10. ESTADÍSTICAS
+   ========================================================= */
+
+.stats {
+    padding: 60px 8%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background: #172554;
+
+    color: white;
+}
+
+
+/* Cada estadística */
+.stat {
+    text-align: center;
+}
+
+
+/* Número */
+.stat strong {
+    display: block;
+
+    font-size: 42px;
+
+    color: #60a5fa;
+}
+
+
+/* Descripción */
+.stat span {
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   11. CONTACTO
+   ========================================================= */
+
+.contact {
+    background: white;
+}
+
+
+/* Dos columnas */
+.contact-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* Título de contacto */
+.contact-info h3 {
+    color: #172554;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Cada información */
+.contact-item {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Emoji */
+.contact-item > span {
+    font-size: 25px;
+}
+
+
+/* Título */
+.contact-item strong {
+    color: #172554;
+}
+
+
+/* Información */
+.contact-item p {
+    color: #64748b;
+}
+
+
+/* =========================================================
+   12. FORMULARIO
+   ========================================================= */
+
+.contact-form {
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+}
+
+
+/* Cada campo */
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Etiquetas */
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #172554;
+
+    font-weight: bold;
+}
+
+
+/* Input y textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* Cuando hacemos clic dentro del campo */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+
+/* Botón del formulario */
+.contact-form .btn {
+    border: none;
+}
+
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+.footer {
+    background: #0f172a;
+
+    color: white;
+
+    padding: 50px 8% 20px;
+}
+
+
+/* Contenido del footer */
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+
+/* Título */
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+
+/* Texto */
+.footer p {
+    color: #94a3b8;
+}
+
+
+/* Enlaces */
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+/* Enlaces individuales */
+.footer-links a {
+    color: #cbd5e1;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* Copyright */
+.copyright {
+    padding-top: 20px;
+
+    border-top: 1px solid #334155;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   14. RESPONSIVE - TABLETS
+   ========================================================= */
+
+/*
+   Estos estilos se activan cuando la pantalla
+   tiene 900px o menos.
+*/
+
+@media (max-width: 900px) {
+
+    /* Header vertical */
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    /* Menú adaptable */
+    .navbar {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Hero más pequeño */
+    .hero {
+        min-height: 550px;
+    }
+
+
+    /* Título más pequeño */
+    .hero h2 {
+        font-size: 42px;
+    }
+
+
+    /* Sobre nosotros pasa a una columna */
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Niveles y actividades pasan
+       a una columna.
+    */
+    .level-container,
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Recursos pasan a 2 columnas.
+    */
+    .resources-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Estadísticas pasan a dos columnas */
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+
+    /* Contacto pasa a una columna */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer vertical */
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================================
+   15. RESPONSIVE - CELULARES
+   ========================================================= */
+
+/*
+   Estos estilos se activan en pantallas
+   de 600px o menos.
+*/
+
+@media (max-width: 600px) {
+
+    /* Menos espacio lateral */
+    .section {
+        padding: 60px 5%;
+    }
+
+
+    /* Hero */
+    .hero {
+        padding: 80px 5%;
+    }
+
+
+    /* Título */
+    .hero h2 {
+        font-size: 36px;
+    }
+
+
+    /*
+       Los botones de la portada
+       se colocan verticalmente.
+    */
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    /* Texto centrado en los botones */
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+
+    /*
+       Las tarjetas "Sobre nosotros"
+       pasan a una columna.
+    */
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Los recursos pasan a una sola columna.
+    */
+    .resources-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Estadísticas en dos columnas.
+    */
+    .stats {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 45px 5%;
+    }
+
+
+    /* Números más pequeños */
+    .stat strong {
+        font-size: 32px;
+    }
+
+
+    /*
+       Enlaces del footer verticales.
+    */
+    .footer-links {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
